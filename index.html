@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<div class=" js-container container2" style="top:0px !important;"></div>
+
+<div class="container">
+    <h1>Happy Birthday!<br>Aghavni</h1>
+    <div>
+        <div class="flame-cont">
+            <div class="flame">
+                <div class="flame-center"></div>
+            </div>
+        </div>
+        <div class="candle-cont">
+            <div class="candle">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+            </div>
+
+        </div>
+        <div class="cake-cont">
+            <div class="cake">
+                <div class="frosting-cont">
+                    <div class="frosting"></div>
+                </div>
+                <div class="choc-layer"></div>
+                <div class="choc-layer top"></div>
+
+            </div>
+            <div class="play" onclick="playAudio(event)">
+                <i class="fa fa-play" id="play"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Happy Birthday! 🎉 Wishing you a day filled with joy, laughter, and all the things that make you smile. Enjoy
+            every moment!
+        </p>
+        <a href="https://danisoft.am">
+            With respects <span>Danisoft Academy</span>
+
+        </a>
+    </footer>
+</div>
+<audio>
+    <source src="./mp3/Happy_birthday_to_you_MIDI(chosic.com).mp3">
+</audio>
+<div class="preload">Click on the button</div>
+<script>
+
+    function playAudio(e) {
+        let audioTag = document.querySelector('audio')
+        let flame_cont = document.querySelector('.flame-cont')
+        let preload = document.querySelector('.preload')
+        let container2 = document.querySelector('.container2')
+        audioTag.play()
+        e.currentTarget.style.display = 'none'
+        preload.style.display = 'none'
+        flame_cont.style.display = 'flex'
+        document.body.classList.add('startCake')
+        container2.style.opacity='1'
+
+    }
+
+</script>
+<script src="./script.js"></script>
+</body>
+</html>
